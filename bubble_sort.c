@@ -1,3 +1,9 @@
+// Bubble sort has a worst-case and average-case time complexity of O(n^2), while 
+// the best case (if the array is already sorted and you use an optimization to stop 
+// early) is O(n). Its space complexity is O(1), since it sorts in place.
+
+
+
 #include <stdio.h>
 void bubble(int arr[], int n);
 void main(){
