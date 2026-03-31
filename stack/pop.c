@@ -14,6 +14,17 @@ void push(int data){
     stack_arr[top]=data;
 }
 
+void print(){
+    if(top==-1){
+        printf("stack underflow\n");
+        return;
+    }
+    for(int i=top;i>=0;i--){
+        printf("%d ",stack_arr[i]);
+    }
+    printf("\n");
+}
+
 int pop(){
     if(top==-1){
         printf("Stack underflow\n");
@@ -26,6 +37,12 @@ int pop(){
 
 int main(){
     push(1);
+    push(2);
+    push(3);
+    push(4);
+    print();
     int data=pop();
-    data=pop();
+    print();
+    push(5);
+    print();
 }
