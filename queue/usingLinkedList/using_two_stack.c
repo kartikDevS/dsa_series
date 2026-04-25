@@ -1,3 +1,32 @@
+#include <stdlib.h>
+#include <stdio.h>
+
+int main() {
+	int op, x;
+	que = (Q)malloc(sizeof(struct queue));
+	que->stack1 = NULL;
+	que->stack2 = NULL;
+	while(1) {	
+		printf("1.Enqueue 2.Dequeue 3.Display 4.Exit\n");
+		printf("Enter your option : ");
+		scanf("%d",&op);
+		switch(op) {
+			case 1:
+				printf("Enter element : ");
+				scanf("%d",&x);
+				enqueue(x);
+				break;
+			case 2: 
+				dequeue();
+				break;
+			case 3: 
+				display();
+				break;
+			case 4: exit(0);
+		}
+	}
+}
+
 struct stack {
 	int data;
 	struct stack *next;
