@@ -1,3 +1,38 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+void main() {
+	int x, op;
+	while(1)
+	{
+		printf("1.Inject 2.Eject 3.Push 4.Pop 5.Display 6.Exit\n");
+		printf("Enter your option : ");
+		scanf("%d", &op);
+		switch(op) {
+			case 1:	printf("Enter an element : ");
+					scanf("%d", &x);
+					inject(x);
+					break;
+			case 2:	eject();
+					break;
+			case 3: printf("Enter an element : ");
+					scanf("%d", &x);
+					push(x);
+					break;
+			case 4: pop();
+					break;
+			case 5: display();
+					break;
+			case 6:	exit(0);
+		}
+	}
+}
+
+
+
+
+
+
 struct queue {
 	int data;
 	struct queue *next;
