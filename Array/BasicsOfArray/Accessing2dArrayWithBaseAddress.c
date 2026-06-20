@@ -1,3 +1,5 @@
+//(*(*(a+i)+j)+k) for accessing 3d array
+
 #include <stdio.h>
 void main() {
 	int num[5][5], i, j, rows, cols;
