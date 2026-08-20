@@ -60,24 +60,18 @@ BSTNODE newNodeInBST(int item) {
 	temp->left = temp->right = NULL;
 	return temp;
 }
-//Complete the code below.
-void postorderInBST(BSTNODE root) {
-	STKNODE stack2=NULL;
+void preorderInBST(BSTNODE root) {
+	//write your code here
 	push(root);
 	while(!isempty()){
 		BSTNODE current=pop();
-		STKNODE temp=malloc(sizeof(struct stacknode));
-		temp->node=current;
-		temp->next=stack2;
-		stack2=temp;
-		if(current->left!=NULL)push(current->left);
-		if(current->right!=NULL)push(current->right);
-	}
-	while(stack2!=NULL){
-		printf("%d ",stack2->node->data);
-		STKNODE temp=stack2;
-		stack2=stack2->next;
-		free(temp);
+		printf("%d ",current->data);
+		if(current->right!=NULL){
+			push(current->right);
+		}
+		if(current->left!=NULL){
+			push(current->left);
+		}
 	}
 }
 BSTNODE insertNodeInBST(BSTNODE node, int ele) {
